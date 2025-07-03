@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c69521d648f68f400364bbd167bdbfd6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c69521d648f68f400364bbd167bdbfd6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c69521d648f68f400364bbd167bdbfd6 = L.map(
+                "map_c69521d648f68f400364bbd167bdbfd6",
+                {
+                    center: [35.0778087812196, -87.7095748754507],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4.5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6abbe2ecca6cde38e7002ce467da8204 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6abbe2ecca6cde38e7002ce467da8204.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var tile_layer_5f97029301baaf7763929c47c1c8f0bb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5f97029301baaf7763929c47c1c8f0bb.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var tile_layer_a6b6441bbb7d1036b7babc38f2ebae2c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a6b6441bbb7d1036b7babc38f2ebae2c.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var tile_layer_14292d3878ab3ccdd53be7196a35ba18 = L.tileLayer(
+                "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_14292d3878ab3ccdd53be7196a35ba18.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var feature_group_5389b0342c24bedc1a003d6402a01794 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_d05543e5b7bccd1048d216e26ba0849c_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_d05543e5b7bccd1048d216e26ba0849c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d05543e5b7bccd1048d216e26ba0849c = L.geoJson(null, {
+                onEachFeature: geo_json_d05543e5b7bccd1048d216e26ba0849c_onEachFeature,
+            
+                style: geo_json_d05543e5b7bccd1048d216e26ba0849c_styler,
+            ...{
+}
+        });
+
+        function geo_json_d05543e5b7bccd1048d216e26ba0849c_add (data) {
+            geo_json_d05543e5b7bccd1048d216e26ba0849c
+                .addData(data);
+        }
+            geo_json_d05543e5b7bccd1048d216e26ba0849c_add({"features": [{"geometry": {"coordinates": [[[-91.4345676696888, 35.12810393481435], [-91.38840975492727, 35.895398875950946], [-92.83329572704041, 35.942653477957286], [-92.86501754341133, 35.1749165334664], [-91.4345676696888, 35.12810393481435]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 14168, "Date of the Flood": "500", "Description": "BLE Dataset of 10m resolution for HUC 11010014", "Extent": "{ \"xmin\": -92.865017543411327, \"ymin\": 35.128069104235905, \"xmax\": -91.388427035877484, \"ymax\": 35.942653477957286 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-92.1267222896444, 35.53536129109659)", "Projection": "EPSG:4326", "River Name": "Little Red River", "Rows": 7816, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset of 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_26a14e5959a3a95b47b57d4f739139d0 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_dc83ee37e809bd40ec42bd99c8eacb11 = $(`<div id="html_dc83ee37e809bd40ec42bd99c8eacb11" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -92.865017543411327, "ymin": 35.128069104235905, "xmax": -91.388427035877484, "ymax": 35.942653477957286 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>7816</td></tr><tr><th style='text-align:left'>Columns</th><td>14168</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset of 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Dataset of 10m resolution for HUC 11010014</td></tr><tr><th style='text-align:left'>River Name</th><td>Little Red River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-92.1267222896444, 35.53536129109659)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>500</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_26a14e5959a3a95b47b57d4f739139d0.setContent(html_dc83ee37e809bd40ec42bd99c8eacb11);
+            
+        
+
+        geo_json_d05543e5b7bccd1048d216e26ba0849c.bindPopup(popup_26a14e5959a3a95b47b57d4f739139d0)
+        ;
+
+        
+    
+    
+            geo_json_d05543e5b7bccd1048d216e26ba0849c.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_ffeea94668aee415bf60abebaa7530a9_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ffeea94668aee415bf60abebaa7530a9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ffeea94668aee415bf60abebaa7530a9 = L.geoJson(null, {
+                onEachFeature: geo_json_ffeea94668aee415bf60abebaa7530a9_onEachFeature,
+            
+                style: geo_json_ffeea94668aee415bf60abebaa7530a9_styler,
+            ...{
+}
+        });
+
+        function geo_json_ffeea94668aee415bf60abebaa7530a9_add (data) {
+            geo_json_ffeea94668aee415bf60abebaa7530a9
+                .addData(data);
+        }
+            geo_json_ffeea94668aee415bf60abebaa7530a9_add({"features": [{"geometry": {"coordinates": [[[-96.26103339106774, 35.79222613238477], [-96.26272357861143, 36.2813051506397], [-97.51091942597242, 36.272047897821516], [-97.50120075545718, 35.78302517544885], [-96.26103339106774, 35.79222613238477]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 11565, "Date of the Flood": "100", "Description": "BLE Dataset of 10m resolution of HUC 11050003", "Extent": "{ \"xmin\": -97.510919425972418, \"ymin\": 35.783066215789667, \"xmax\": -96.260998974445158, \"ymax\": 36.281305150639703 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-96.88595920020879, 36.032185683214685)", "Projection": "EPSG:4326", "River Name": "Cimarron River", "Rows": 4610, "Source": "SDML Lab, University of Alabama", "State": "Oklahoma", "Title": "BLE Dataset of 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_71f9434d41c26e70a04a68210bcb2254 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7858f68e24a7a608d239a1df4a8edee4 = $(`<div id="html_7858f68e24a7a608d239a1df4a8edee4" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -97.510919425972418, "ymin": 35.783066215789667, "xmax": -96.260998974445158, "ymax": 36.281305150639703 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>4610</td></tr><tr><th style='text-align:left'>Columns</th><td>11565</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset of 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Oklahoma</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Dataset of 10m resolution of HUC 11050003</td></tr><tr><th style='text-align:left'>River Name</th><td>Cimarron River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-96.88595920020879, 36.032185683214685)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>100</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_71f9434d41c26e70a04a68210bcb2254.setContent(html_7858f68e24a7a608d239a1df4a8edee4);
+            
+        
+
+        geo_json_ffeea94668aee415bf60abebaa7530a9.bindPopup(popup_71f9434d41c26e70a04a68210bcb2254)
+        ;
+
+        
+    
+    
+            geo_json_ffeea94668aee415bf60abebaa7530a9.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_65dd8c38f701b5373c5fb26627d9f7d7_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_65dd8c38f701b5373c5fb26627d9f7d7_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_65dd8c38f701b5373c5fb26627d9f7d7 = L.geoJson(null, {
+                onEachFeature: geo_json_65dd8c38f701b5373c5fb26627d9f7d7_onEachFeature,
+            
+                style: geo_json_65dd8c38f701b5373c5fb26627d9f7d7_styler,
+            ...{
+}
+        });
+
+        function geo_json_65dd8c38f701b5373c5fb26627d9f7d7_add (data) {
+            geo_json_65dd8c38f701b5373c5fb26627d9f7d7
+                .addData(data);
+        }
+            geo_json_65dd8c38f701b5373c5fb26627d9f7d7_add({"features": [{"geometry": {"coordinates": [[[-91.3234237649812, 35.53381850161981], [-91.27250842566241, 36.354764219880735], [-92.45635982736304, 36.39567727459544], [-92.49455218882072, 35.57431569130994], [-91.3234237649812, 35.53381850161981]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 12009, "Date of the Flood": "500", "Description": "BLE DATASET for 10m resolution for HUC 11010004", "Extent": "{ \"xmin\": -92.49455218882072, \"ymin\": 35.533856548102897, \"xmax\": -91.272494672650097, \"ymax\": 36.395677274595442 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-91.88352343073541, 35.96476691134917)", "Projection": "EPSG:4326", "River Name": "White River", "Rows": 8469, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fa49076b3641c976e753afd3bfae0297 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7906a9fd6a5584b6258e2c51573c8c6b = $(`<div id="html_7906a9fd6a5584b6258e2c51573c8c6b" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -92.49455218882072, "ymin": 35.533856548102897, "xmax": -91.272494672650097, "ymax": 36.395677274595442 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>8469</td></tr><tr><th style='text-align:left'>Columns</th><td>12009</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE DATASET for 10m resolution for HUC 11010004</td></tr><tr><th style='text-align:left'>River Name</th><td>White River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-91.88352343073541, 35.96476691134917)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>500</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_fa49076b3641c976e753afd3bfae0297.setContent(html_7906a9fd6a5584b6258e2c51573c8c6b);
+            
+        
+
+        geo_json_65dd8c38f701b5373c5fb26627d9f7d7.bindPopup(popup_fa49076b3641c976e753afd3bfae0297)
+        ;
+
+        
+    
+    
+            geo_json_65dd8c38f701b5373c5fb26627d9f7d7.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_7e5579379342c34d1ac9d9bc7276acaf_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_7e5579379342c34d1ac9d9bc7276acaf_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7e5579379342c34d1ac9d9bc7276acaf = L.geoJson(null, {
+                onEachFeature: geo_json_7e5579379342c34d1ac9d9bc7276acaf_onEachFeature,
+            
+                style: geo_json_7e5579379342c34d1ac9d9bc7276acaf_styler,
+            ...{
+}
+        });
+
+        function geo_json_7e5579379342c34d1ac9d9bc7276acaf_add (data) {
+            geo_json_7e5579379342c34d1ac9d9bc7276acaf
+                .addData(data);
+        }
+            geo_json_7e5579379342c34d1ac9d9bc7276acaf_add({"features": [{"geometry": {"coordinates": [[[-92.79110275254789, 34.50526270813173], [-92.7798384960102, 34.77593368350476], [-93.09484609088283, 34.784174900173966], [-93.10500987834128, 34.51347755187583], [-92.79110275254789, 34.50526270813173]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 3285, "Date of the Flood": "100 year Return period Flow", "Description": "BLE Benchmark Daset of 10m spatial resolution with HUCID 08040203", "Extent": "{ \"xmin\": -93.105009878341278, \"ymin\": 34.50527073004821, \"xmax\": -92.77988560621101, \"ymax\": 34.784174900173966 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-92.94244774227614, 34.64472281511109)", "Projection": "EPSG:4326", "River Name": "South Fork Saline River", "Rows": 2818, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ecd27c6062c20c947444bd685898d4b4 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_845e1f16ef707b87ca260d189d753beb = $(`<div id="html_845e1f16ef707b87ca260d189d753beb" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -93.105009878341278, "ymin": 34.50527073004821, "xmax": -92.77988560621101, "ymax": 34.784174900173966 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>2818</td></tr><tr><th style='text-align:left'>Columns</th><td>3285</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Benchmark Daset of 10m spatial resolution with HUCID 08040203</td></tr><tr><th style='text-align:left'>River Name</th><td>South Fork Saline River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-92.94244774227614, 34.64472281511109)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>100 year Return period Flow</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_ecd27c6062c20c947444bd685898d4b4.setContent(html_845e1f16ef707b87ca260d189d753beb);
+            
+        
+
+        geo_json_7e5579379342c34d1ac9d9bc7276acaf.bindPopup(popup_ecd27c6062c20c947444bd685898d4b4)
+        ;
+
+        
+    
+    
+            geo_json_7e5579379342c34d1ac9d9bc7276acaf.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_fff56689f30c6055dd99282b02296d2b_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_fff56689f30c6055dd99282b02296d2b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_fff56689f30c6055dd99282b02296d2b = L.geoJson(null, {
+                onEachFeature: geo_json_fff56689f30c6055dd99282b02296d2b_onEachFeature,
+            
+                style: geo_json_fff56689f30c6055dd99282b02296d2b_styler,
+            ...{
+}
+        });
+
+        function geo_json_fff56689f30c6055dd99282b02296d2b_add (data) {
+            geo_json_fff56689f30c6055dd99282b02296d2b
+                .addData(data);
+        }
+            geo_json_fff56689f30c6055dd99282b02296d2b_add({"features": [{"geometry": {"coordinates": [[[-90.72228418152959, 35.58696365732108], [-90.64710768497343, 36.656355818049306], [-91.56408458492783, 36.693714341324466], [-91.62642343144132, 35.623825079825636], [-90.72228418152959, 35.58696365732108]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 10205, "Date of the Flood": "100", "Description": "BLE Dataser with 10m resolution for HUC 11010009", "Extent": "{ \"xmin\": -91.626423431441324, \"ymin\": 35.58701053987982, \"xmax\": -90.647154178537249, \"ymax\": 36.693714341324466 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-91.1367888049893, 36.140362440602146)", "Projection": "EPSG:4326", "River Name": "Black River", "Rows": 11533, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e261a38ae6b0e385defe441d2fac1561 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_12df001a630d43fa260e04b767c4d727 = $(`<div id="html_12df001a630d43fa260e04b767c4d727" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -91.626423431441324, "ymin": 35.58701053987982, "xmax": -90.647154178537249, "ymax": 36.693714341324466 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>11533</td></tr><tr><th style='text-align:left'>Columns</th><td>10205</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Dataser with 10m resolution for HUC 11010009</td></tr><tr><th style='text-align:left'>River Name</th><td>Black River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-91.1367888049893, 36.140362440602146)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>100</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_e261a38ae6b0e385defe441d2fac1561.setContent(html_12df001a630d43fa260e04b767c4d727);
+            
+        
+
+        geo_json_fff56689f30c6055dd99282b02296d2b.bindPopup(popup_e261a38ae6b0e385defe441d2fac1561)
+        ;
+
+        
+    
+    
+            geo_json_fff56689f30c6055dd99282b02296d2b.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_fbf6ed480eb325408fdc7d0819e4dd9c_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_fbf6ed480eb325408fdc7d0819e4dd9c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_fbf6ed480eb325408fdc7d0819e4dd9c = L.geoJson(null, {
+                onEachFeature: geo_json_fbf6ed480eb325408fdc7d0819e4dd9c_onEachFeature,
+            
+                style: geo_json_fbf6ed480eb325408fdc7d0819e4dd9c_styler,
+            ...{
+}
+        });
+
+        function geo_json_fbf6ed480eb325408fdc7d0819e4dd9c_add (data) {
+            geo_json_fbf6ed480eb325408fdc7d0819e4dd9c
+                .addData(data);
+        }
+            geo_json_fbf6ed480eb325408fdc7d0819e4dd9c_add({"features": [{"geometry": {"coordinates": [[[-91.32330901399203, 35.54070088498102], [-91.27281838269275, 36.35477647026323], [-92.45554570191824, 36.395653174496154], [-92.49343064833101, 35.58116550118425], [-91.32330901399203, 35.54070088498102]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 11985, "Date of the Flood": "100 year flood", "Description": "BLE Dataset with 10m resolution for HUC 11010004", "Extent": "{ \"xmin\": -92.493430648331014, \"ymin\": 35.540751637124401, \"xmax\": -91.272797466844182, \"ymax\": 36.395653174496154 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-91.88311405758759, 35.968202405810274)", "Projection": "EPSG:4326", "River Name": "White River", "Rows": 8394, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cf7370b1cfe6e5527fce93c7ef8c234f = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_152d554c2330c5773a599c584322eba4 = $(`<div id="html_152d554c2330c5773a599c584322eba4" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -92.493430648331014, "ymin": 35.540751637124401, "xmax": -91.272797466844182, "ymax": 36.395653174496154 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>8394</td></tr><tr><th style='text-align:left'>Columns</th><td>11985</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Dataset with 10m resolution for HUC 11010004</td></tr><tr><th style='text-align:left'>River Name</th><td>White River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-91.88311405758759, 35.968202405810274)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>100 year flood</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_cf7370b1cfe6e5527fce93c7ef8c234f.setContent(html_152d554c2330c5773a599c584322eba4);
+            
+        
+
+        geo_json_fbf6ed480eb325408fdc7d0819e4dd9c.bindPopup(popup_cf7370b1cfe6e5527fce93c7ef8c234f)
+        ;
+
+        
+    
+    
+            geo_json_fbf6ed480eb325408fdc7d0819e4dd9c.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_094bc09483a1e10101bf4afcce990862_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_094bc09483a1e10101bf4afcce990862_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_094bc09483a1e10101bf4afcce990862 = L.geoJson(null, {
+                onEachFeature: geo_json_094bc09483a1e10101bf4afcce990862_onEachFeature,
+            
+                style: geo_json_094bc09483a1e10101bf4afcce990862_styler,
+            ...{
+}
+        });
+
+        function geo_json_094bc09483a1e10101bf4afcce990862_add (data) {
+            geo_json_094bc09483a1e10101bf4afcce990862
+                .addData(data);
+        }
+            geo_json_094bc09483a1e10101bf4afcce990862_add({"features": [{"geometry": {"coordinates": [[[-91.43460195137341, 35.12814671981711], [-91.3884552009448, 35.89526324352882], [-92.83322682760776, 35.94251433880932], [-92.86494197202265, 35.17495594763773], [-91.43460195137341, 35.12814671981711]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 14167, "Date of the Flood": "100", "Description": "BLE Dataset with 10m resolution for HUC 11010014", "Extent": "{ \"xmin\": -92.864941972022649, \"ymin\": 35.128127596683917, \"xmax\": -91.388436088263944, \"ymax\": 35.942514338809318 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-92.1266890301433, 35.535320967746614)", "Projection": "EPSG:4326", "River Name": "Little Red River", "Rows": 7814, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8c60890872f51f30b4c5c2b464cbab64 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_887362d0d49f07f11ed2573aff43664d = $(`<div id="html_887362d0d49f07f11ed2573aff43664d" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -92.864941972022649, "ymin": 35.128127596683917, "xmax": -91.388436088263944, "ymax": 35.942514338809318 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>7814</td></tr><tr><th style='text-align:left'>Columns</th><td>14167</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Dataset with 10m resolution for HUC 11010014</td></tr><tr><th style='text-align:left'>River Name</th><td>Little Red River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-92.1266890301433, 35.535320967746614)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>100</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_8c60890872f51f30b4c5c2b464cbab64.setContent(html_887362d0d49f07f11ed2573aff43664d);
+            
+        
+
+        geo_json_094bc09483a1e10101bf4afcce990862.bindPopup(popup_8c60890872f51f30b4c5c2b464cbab64)
+        ;
+
+        
+    
+    
+            geo_json_094bc09483a1e10101bf4afcce990862.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_7b08c92e2cde91e86d435a3768ca58d9_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_7b08c92e2cde91e86d435a3768ca58d9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7b08c92e2cde91e86d435a3768ca58d9 = L.geoJson(null, {
+                onEachFeature: geo_json_7b08c92e2cde91e86d435a3768ca58d9_onEachFeature,
+            
+                style: geo_json_7b08c92e2cde91e86d435a3768ca58d9_styler,
+            ...{
+}
+        });
+
+        function geo_json_7b08c92e2cde91e86d435a3768ca58d9_add (data) {
+            geo_json_7b08c92e2cde91e86d435a3768ca58d9
+                .addData(data);
+        }
+            geo_json_7b08c92e2cde91e86d435a3768ca58d9_add({"features": [{"geometry": {"coordinates": [[[-96.26103339106774, 35.79222613238477], [-96.26272357861143, 36.2813051506397], [-97.51091942597242, 36.272047897821516], [-97.50120075545718, 35.78302517544885], [-96.26103339106774, 35.79222613238477]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 11565, "Date of the Flood": "500", "Description": "BLE Dataset with 10m resolution for HUC 11050003", "Extent": "{ \"xmin\": -97.510919425972418, \"ymin\": 35.783066215789667, \"xmax\": -96.260998974445158, \"ymax\": 36.281305150639703 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-96.88595920020879, 36.032185683214685)", "Projection": "EPSG:4326", "River Name": "Cimarron River", "Rows": 4610, "Source": "SDML Lab, University of Alabama", "State": "Oklahoma", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_139296ce47eedc15284ed0fc2c619682 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b16258335738b112f0de7f683a426aed = $(`<div id="html_b16258335738b112f0de7f683a426aed" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -97.510919425972418, "ymin": 35.783066215789667, "xmax": -96.260998974445158, "ymax": 36.281305150639703 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>4610</td></tr><tr><th style='text-align:left'>Columns</th><td>11565</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Oklahoma</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Dataset with 10m resolution for HUC 11050003</td></tr><tr><th style='text-align:left'>River Name</th><td>Cimarron River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-96.88595920020879, 36.032185683214685)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>500</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_139296ce47eedc15284ed0fc2c619682.setContent(html_b16258335738b112f0de7f683a426aed);
+            
+        
+
+        geo_json_7b08c92e2cde91e86d435a3768ca58d9.bindPopup(popup_139296ce47eedc15284ed0fc2c619682)
+        ;
+
+        
+    
+    
+            geo_json_7b08c92e2cde91e86d435a3768ca58d9.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_eefe6ee36a4fc83c74212f329343fe2f_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_eefe6ee36a4fc83c74212f329343fe2f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_eefe6ee36a4fc83c74212f329343fe2f = L.geoJson(null, {
+                onEachFeature: geo_json_eefe6ee36a4fc83c74212f329343fe2f_onEachFeature,
+            
+                style: geo_json_eefe6ee36a4fc83c74212f329343fe2f_styler,
+            ...{
+}
+        });
+
+        function geo_json_eefe6ee36a4fc83c74212f329343fe2f_add (data) {
+            geo_json_eefe6ee36a4fc83c74212f329343fe2f
+                .addData(data);
+        }
+            geo_json_eefe6ee36a4fc83c74212f329343fe2f_add({"features": [{"geometry": {"coordinates": [[[-92.84490541360778, 34.31359062351197], [-92.82320349384139, 34.843541312651475], [-94.32653870062208, 34.874646550644655], [-94.33797685201591, 34.344501611227756], [-92.84490541360778, 34.31359062351197]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 14218, "Date of the Flood": "500 year return period", "Description": "BLE Benchmark Daset of 10m spatial resolution with HUCID 08040101 for 500 year return period flow.", "Extent": "{ \"xmin\": -94.337976852015913, \"ymin\": 34.313607521809423, \"xmax\": -92.823192782137568, \"ymax\": 34.874646550644655 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-93.58058481707674, 34.594127036227036)", "Projection": "EPSG:4326", "River Name": "Ouachita River", "Rows": 5266, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution "}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a4c414ad96febea4ab2eb569ec8e4abc = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_445a22f5a6c580309cc6e411e8c1acda = $(`<div id="html_445a22f5a6c580309cc6e411e8c1acda" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -94.337976852015913, "ymin": 34.313607521809423, "xmax": -92.823192782137568, "ymax": 34.874646550644655 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>5266</td></tr><tr><th style='text-align:left'>Columns</th><td>14218</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution </td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Benchmark Daset of 10m spatial resolution with HUCID 08040101 for 500 year return period flow.</td></tr><tr><th style='text-align:left'>River Name</th><td>Ouachita River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-93.58058481707674, 34.594127036227036)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>500 year return period</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_a4c414ad96febea4ab2eb569ec8e4abc.setContent(html_445a22f5a6c580309cc6e411e8c1acda);
+            
+        
+
+        geo_json_eefe6ee36a4fc83c74212f329343fe2f.bindPopup(popup_a4c414ad96febea4ab2eb569ec8e4abc)
+        ;
+
+        
+    
+    
+            geo_json_eefe6ee36a4fc83c74212f329343fe2f.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_63319fd4554fa8caae9c6278771ffdc0_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_63319fd4554fa8caae9c6278771ffdc0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_63319fd4554fa8caae9c6278771ffdc0 = L.geoJson(null, {
+                onEachFeature: geo_json_63319fd4554fa8caae9c6278771ffdc0_onEachFeature,
+            
+                style: geo_json_63319fd4554fa8caae9c6278771ffdc0_styler,
+            ...{
+}
+        });
+
+        function geo_json_63319fd4554fa8caae9c6278771ffdc0_add (data) {
+            geo_json_63319fd4554fa8caae9c6278771ffdc0
+                .addData(data);
+        }
+            geo_json_63319fd4554fa8caae9c6278771ffdc0_add({"features": [{"geometry": {"coordinates": [[[-92.79106796099876, 34.50522017732792], [-92.77979612478846, 34.77606985498989], [-93.09491438737838, 34.7843139161155], [-93.10508464158367, 34.513437838987244], [-92.79106796099876, 34.50522017732792]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 3287, "Date of the Flood": "500 year return period flow", "Description": "BLE Benchmark Daset of 10m spatial resolution with HUCID 08040203", "Extent": "{ \"xmin\": -93.105084641583673, \"ymin\": 34.505220689814223, \"xmax\": -92.779772785253073, \"ymax\": 34.784313916115501 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-92.94242871341837, 34.644767302964866)", "Projection": "EPSG:4326", "River Name": "South Fork Saline River", "Rows": 2820, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e26db0898e374735a3df9244017e01db = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_9c0db5773a661ef1220b76321db26707 = $(`<div id="html_9c0db5773a661ef1220b76321db26707" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -93.105084641583673, "ymin": 34.505220689814223, "xmax": -92.779772785253073, "ymax": 34.784313916115501 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>2820</td></tr><tr><th style='text-align:left'>Columns</th><td>3287</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Benchmark Daset of 10m spatial resolution with HUCID 08040203</td></tr><tr><th style='text-align:left'>River Name</th><td>South Fork Saline River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-92.94242871341837, 34.644767302964866)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>500 year return period flow</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_e26db0898e374735a3df9244017e01db.setContent(html_9c0db5773a661ef1220b76321db26707);
+            
+        
+
+        geo_json_63319fd4554fa8caae9c6278771ffdc0.bindPopup(popup_e26db0898e374735a3df9244017e01db)
+        ;
+
+        
+    
+    
+            geo_json_63319fd4554fa8caae9c6278771ffdc0.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+        function geo_json_21b852e691520ecb5b9b6e4847d3c53d_styler(feature) {
+            switch(feature.properties.Format) {
+                default:
+                    return {"color": "#ec7014", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_21b852e691520ecb5b9b6e4847d3c53d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_21b852e691520ecb5b9b6e4847d3c53d = L.geoJson(null, {
+                onEachFeature: geo_json_21b852e691520ecb5b9b6e4847d3c53d_onEachFeature,
+            
+                style: geo_json_21b852e691520ecb5b9b6e4847d3c53d_styler,
+            ...{
+}
+        });
+
+        function geo_json_21b852e691520ecb5b9b6e4847d3c53d_add (data) {
+            geo_json_21b852e691520ecb5b9b6e4847d3c53d
+                .addData(data);
+        }
+            geo_json_21b852e691520ecb5b9b6e4847d3c53d_add({"features": [{"geometry": {"coordinates": [[[-92.84498303633313, 34.31355073296568], [-92.82328903100321, 34.84332277722516], [-94.32639943824707, 34.87442380462092], [-94.33783467687387, 34.34445760261317], [-92.84498303633313, 34.31355073296568]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 14216, "Date of the Flood": "100 year return period flow", "Description": "BLE Benchmark Daset of 10m spatial resolution with HUCID 08040101", "Extent": "{ \"xmin\": -94.337834676873868, \"ymin\": 34.31359332748724, \"xmax\": -92.823251458231709, \"ymax\": 34.874423804620918 }", "Format": "GTiff", "Level": "Level_4", "Location of the centroid of the flood map": "(-93.58054306755278, 34.59400856605408)", "Projection": "EPSG:4326", "River Name": "Ouachita River", "Rows": 5264, "Source": "SDML Lab, University of Alabama", "State": "Arkansas", "Title": "BLE Dataset with 10m resolution "}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b01520ec507903f20f18a29a8ea39cde = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b908f87eef2f68dcec21b713b6aed7b2 = $(`<div id="html_b908f87eef2f68dcec21b713b6aed7b2" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -94.337834676873868, "ymin": 34.31359332748724, "xmax": -92.823251458231709, "ymax": 34.874423804620918 }</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>5264</td></tr><tr><th style='text-align:left'>Columns</th><td>14216</td></tr><tr><th style='text-align:left'>Title</th><td>BLE Dataset with 10m resolution </td></tr><tr><th style='text-align:left'>State</th><td>Arkansas</td></tr><tr><th style='text-align:left'>Description</th><td>BLE Benchmark Daset of 10m spatial resolution with HUCID 08040101</td></tr><tr><th style='text-align:left'>River Name</th><td>Ouachita River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-93.58054306755278, 34.59400856605408)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>100 year return period flow</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_4</td></tr><tr><td colspan='2' style='color:red;'>File info missing</td></tr></table></div>`)[0];
+                popup_b01520ec507903f20f18a29a8ea39cde.setContent(html_b908f87eef2f68dcec21b713b6aed7b2);
+            
+        
+
+        geo_json_21b852e691520ecb5b9b6e4847d3c53d.bindPopup(popup_b01520ec507903f20f18a29a8ea39cde)
+        ;
+
+        
+    
+    
+            geo_json_21b852e691520ecb5b9b6e4847d3c53d.addTo(feature_group_5389b0342c24bedc1a003d6402a01794);
+        
+    
+            feature_group_5389b0342c24bedc1a003d6402a01794.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var feature_group_806eb0b86a279319ecff59d01926d812 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_ea1e8819560d01b848bbc2b9b1ccd323_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#238b45", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ea1e8819560d01b848bbc2b9b1ccd323_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ea1e8819560d01b848bbc2b9b1ccd323 = L.geoJson(null, {
+                onEachFeature: geo_json_ea1e8819560d01b848bbc2b9b1ccd323_onEachFeature,
+            
+                style: geo_json_ea1e8819560d01b848bbc2b9b1ccd323_styler,
+            ...{
+}
+        });
+
+        function geo_json_ea1e8819560d01b848bbc2b9b1ccd323_add (data) {
+            geo_json_ea1e8819560d01b848bbc2b9b1ccd323
+                .addData(data);
+        }
+            geo_json_ea1e8819560d01b848bbc2b9b1ccd323_add({"features": [{"geometry": {"coordinates": [[[-77.95073280596819, 35.25535395611853], [-77.90823032492897, 35.433142849982616], [-78.09555508937027, 35.462011080534594], [-78.13763856472778, 35.284159815038585], [-77.95073280596819, 35.25535395611853]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 1569, "DMS_Code_centroid": "780123W352131N", "Date of the Flood": "20161014", "Description": "FIM generated from Planet\u2019s Imagery of 2016 Hurricane Matthew with a spatial resolution of 10m.", "Extent": "{ \"xmin\": -78.101761307687099, \"ymin\": 35.277766833357035, \"xmax\": -77.944499684713904, \"ymax\": 35.439639058405923 }", "File_Name": "PSS_10_2m_20161014_780123W352131N_BM.tif", "Format": "GTiff", "Level": "Level_2", "Location of the centroid of the flood map": "(-78.02313049620051, 35.358702945881475)", "Projection": "EPSG:4326", "Resolution": 10.2, "River Name": "Neuse River", "Rows": 1615, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "North Carolina, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c342bf8d85beccb84f9da4604a6984b7 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ccd52d74c3583cb23c0cee04e8b41843 = $(`<div id="html_ccd52d74c3583cb23c0cee04e8b41843" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>PSS_10_2m_20161014_780123W352131N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>10.2</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -78.101761307687099, "ymin": 35.277766833357035, "xmax": -77.944499684713904, "ymax": 35.439639058405923 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>780123W352131N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>1615</td></tr><tr><th style='text-align:left'>Columns</th><td>1569</td></tr><tr><th style='text-align:left'>State</th><td>North Carolina, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from Planet’s Imagery of 2016 Hurricane Matthew with a spatial resolution of 10m.</td></tr><tr><th style='text-align:left'>River Name</th><td>Neuse River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-78.02313049620051, 35.358702945881475)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20161014</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_2</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_2/20161014_780123W352131N/PSS_10_2m_20161014_780123W352131N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_c342bf8d85beccb84f9da4604a6984b7.setContent(html_ccd52d74c3583cb23c0cee04e8b41843);
+            
+        
+
+        geo_json_ea1e8819560d01b848bbc2b9b1ccd323.bindPopup(popup_c342bf8d85beccb84f9da4604a6984b7)
+        ;
+
+        
+    
+    
+            geo_json_ea1e8819560d01b848bbc2b9b1ccd323.addTo(feature_group_806eb0b86a279319ecff59d01926d812);
+        
+    
+            feature_group_806eb0b86a279319ecff59d01926d812.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var feature_group_a1a0174e1a387d48095e8856e711de3c = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_293d79323262d693fa4fea6596083bd6_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#6a51a3", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_293d79323262d693fa4fea6596083bd6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_293d79323262d693fa4fea6596083bd6 = L.geoJson(null, {
+                onEachFeature: geo_json_293d79323262d693fa4fea6596083bd6_onEachFeature,
+            
+                style: geo_json_293d79323262d693fa4fea6596083bd6_styler,
+            ...{
+}
+        });
+
+        function geo_json_293d79323262d693fa4fea6596083bd6_add (data) {
+            geo_json_293d79323262d693fa4fea6596083bd6
+                .addData(data);
+        }
+            geo_json_293d79323262d693fa4fea6596083bd6_add({"features": [{"geometry": {"coordinates": [[[-95.26461314894892, 30.828012332617956], [-95.26017978832722, 31.316544894521243], [-95.7936589362061, 31.31880836758613], [-95.79489547734443, 30.830264432993538], [-95.26461314894892, 30.828012332617956]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 5714, "DMS_Code_centroid": "953144W310424N", "Date of the Flood": "20190527T00265", "Description": "FIM generated from Sentinel-1 flood map.", "Extent": "{ \"xmin\": -95.793664628037178, \"ymin\": 30.830277777158123, \"xmax\": -95.264590553393944, \"ymax\": 31.316574073977559 }", "File_Name": "S1A_9_5m_20190527T00265_953144W310424N_BM.tif", "Format": "GTiff", "Level": "Level_3", "Location of the centroid of the flood map": "(-95.52912759071556, 31.07342592556784)", "Projection": "EPSG:4326", "Resolution": 9.5, "River Name": "Trinity River", "Rows": 5252, "Source": "SDML Lab, University of Alabama", "State": "Texas, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a10281fe9e851474a4be3de2bdbe11ef = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_0f8b4b26a82a634ea663f1f52bebf5f0 = $(`<div id="html_0f8b4b26a82a634ea663f1f52bebf5f0" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>S1A_9_5m_20190527T00265_953144W310424N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>9.5</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -95.793664628037178, "ymin": 30.830277777158123, "xmax": -95.264590553393944, "ymax": 31.316574073977559 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>953144W310424N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>5252</td></tr><tr><th style='text-align:left'>Columns</th><td>5714</td></tr><tr><th style='text-align:left'>State</th><td>Texas, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from Sentinel-1 flood map.</td></tr><tr><th style='text-align:left'>River Name</th><td>Trinity River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-95.52912759071556, 31.07342592556784)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20190527T00265</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_3</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_3/20190527T00265_953144W310424N/S1A_9_5m_20190527T00265_953144W310424N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_a10281fe9e851474a4be3de2bdbe11ef.setContent(html_0f8b4b26a82a634ea663f1f52bebf5f0);
+            
+        
+
+        geo_json_293d79323262d693fa4fea6596083bd6.bindPopup(popup_a10281fe9e851474a4be3de2bdbe11ef)
+        ;
+
+        
+    
+    
+            geo_json_293d79323262d693fa4fea6596083bd6.addTo(feature_group_a1a0174e1a387d48095e8856e711de3c);
+        
+    
+        function geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#6a51a3", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82 = L.geoJson(null, {
+                onEachFeature: geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82_onEachFeature,
+            
+                style: geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82_styler,
+            ...{
+}
+        });
+
+        function geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82_add (data) {
+            geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82
+                .addData(data);
+        }
+            geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82_add({"features": [{"geometry": {"coordinates": [[[-96.5073055802748, 29.729030222705813], [-96.51033508703517, 30.22064405118357], [-97.1181690078283, 30.216134769783412], [-97.11153169180409, 29.72454275248974], [-96.5073055802748, 29.729030222705813]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 6494, "DMS_Code_centroid": "964839W295821N", "Date of the Flood": "20170829T00264", "Description": "FIM generated from Sentinel-1 flood map", "Extent": "{ \"xmin\": -97.111591206643197, \"ymin\": 29.728979245219591, \"xmax\": -96.51029476170855, \"ymax\": 30.21620158788145 }", "File_Name": "S1A_9_5m_20170829T00264_964839W295821N_BM.tif", "Format": "GTiff", "Level": "Level_3", "Location of the centroid of the flood map": "(-96.81094298417588, 29.97259041655052)", "Projection": "EPSG:4326", "Resolution": 9.5, "River Name": "Colorado River", "Rows": 5262, "Source": "SDML Lab, University of Alabama", "State": "Texas, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ec68a0dc12f0575c4049b6e7881dc436 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_5a508c5e6b0a2fdbe7d3b1c30aa5e15d = $(`<div id="html_5a508c5e6b0a2fdbe7d3b1c30aa5e15d" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>S1A_9_5m_20170829T00264_964839W295821N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>9.5</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -97.111591206643197, "ymin": 29.728979245219591, "xmax": -96.51029476170855, "ymax": 30.21620158788145 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>964839W295821N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>5262</td></tr><tr><th style='text-align:left'>Columns</th><td>6494</td></tr><tr><th style='text-align:left'>State</th><td>Texas, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from Sentinel-1 flood map</td></tr><tr><th style='text-align:left'>River Name</th><td>Colorado River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-96.81094298417588, 29.97259041655052)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20170829T00264</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_3</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_3/20170829T00264_964839W295821N/S1A_9_5m_20170829T00264_964839W295821N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_ec68a0dc12f0575c4049b6e7881dc436.setContent(html_5a508c5e6b0a2fdbe7d3b1c30aa5e15d);
+            
+        
+
+        geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82.bindPopup(popup_ec68a0dc12f0575c4049b6e7881dc436)
+        ;
+
+        
+    
+    
+            geo_json_69ec8d66a0b9a8cfec53cf7dd84fbf82.addTo(feature_group_a1a0174e1a387d48095e8856e711de3c);
+        
+    
+        function geo_json_845782c6af47052881ecaf252299f665_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#6a51a3", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_845782c6af47052881ecaf252299f665_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_845782c6af47052881ecaf252299f665 = L.geoJson(null, {
+                onEachFeature: geo_json_845782c6af47052881ecaf252299f665_onEachFeature,
+            
+                style: geo_json_845782c6af47052881ecaf252299f665_styler,
+            ...{
+}
+        });
+
+        function geo_json_845782c6af47052881ecaf252299f665_add (data) {
+            geo_json_845782c6af47052881ecaf252299f665
+                .addData(data);
+        }
+            geo_json_845782c6af47052881ecaf252299f665_add({"features": [{"geometry": {"coordinates": [[[-94.11815053664043, 40.12555278163748], [-94.11027315828657, 40.42422320312933], [-94.64462988016099, 40.43107480994946], [-94.65028049659773, 40.13237465850468], [-94.11815053664043, 40.12555278163748]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 5689, "DMS_Code_centroid": "942252W401641N", "Date of the Flood": "20190529T00130", "Description": "FIM generated from Sentinel-1 flood map.", "Extent": "{ \"xmin\": -94.644757826683644, \"ymin\": 40.132301306403633, \"xmax\": -94.117998566857707, \"ymax\": 40.42433834375484 }", "File_Name": "S1A_8_5m_20190529T00130_942252W401641N_BM.tif", "Format": "GTiff", "Level": "Level_3", "Location of the centroid of the flood map": "(-94.38137819677067, 40.27831982507924)", "Projection": "EPSG:4326", "Resolution": 8.5, "River Name": "Grand River", "Rows": 3154, "Source": "SDML Lab, University of Alabama", "State": "Missouri, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_15a12a429795e66711c8307e402580a9 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_9feee231ee13a04d6e61a9a1adc3c6bc = $(`<div id="html_9feee231ee13a04d6e61a9a1adc3c6bc" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>S1A_8_5m_20190529T00130_942252W401641N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>8.5</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -94.644757826683644, "ymin": 40.132301306403633, "xmax": -94.117998566857707, "ymax": 40.42433834375484 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>942252W401641N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>3154</td></tr><tr><th style='text-align:left'>Columns</th><td>5689</td></tr><tr><th style='text-align:left'>State</th><td>Missouri, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from Sentinel-1 flood map.</td></tr><tr><th style='text-align:left'>River Name</th><td>Grand River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-94.38137819677067, 40.27831982507924)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20190529T00130</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_3</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_3/20190529T00130_942252W401641N/S1A_8_5m_20190529T00130_942252W401641N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_15a12a429795e66711c8307e402580a9.setContent(html_9feee231ee13a04d6e61a9a1adc3c6bc);
+            
+        
+
+        geo_json_845782c6af47052881ecaf252299f665.bindPopup(popup_15a12a429795e66711c8307e402580a9)
+        ;
+
+        
+    
+    
+            geo_json_845782c6af47052881ecaf252299f665.addTo(feature_group_a1a0174e1a387d48095e8856e711de3c);
+        
+    
+            feature_group_a1a0174e1a387d48095e8856e711de3c.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var feature_group_d75611b8d906de17fdb6312d3ccb4a50 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_ead09e9c223bd247440ee09d503ef71b_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ead09e9c223bd247440ee09d503ef71b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ead09e9c223bd247440ee09d503ef71b = L.geoJson(null, {
+                onEachFeature: geo_json_ead09e9c223bd247440ee09d503ef71b_onEachFeature,
+            
+                style: geo_json_ead09e9c223bd247440ee09d503ef71b_styler,
+            ...{
+}
+        });
+
+        function geo_json_ead09e9c223bd247440ee09d503ef71b_add (data) {
+            geo_json_ead09e9c223bd247440ee09d503ef71b
+                .addData(data);
+        }
+            geo_json_ead09e9c223bd247440ee09d503ef71b_add({"features": [{"geometry": {"coordinates": [[[-91.65093074788564, 34.13142875357467], [-91.63025328047438, 34.4993651748844], [-92.17419112515978, 34.51848318777316], [-92.19230061937668, 34.15046464148919], [-91.65093074788564, 34.13142875357467]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 116940, "DMS_Code_centroid": "915444W341929N", "Date of the Flood": "20160103", "Description": "FIM generated from NOAA Emergency Response Aerial Imagery with a spatial resolution of 0.4m.", "Extent": "{ \"xmin\": -92.1751, \"ymin\": 34.149898680000007, \"xmax\": -91.649899071999997, \"ymax\": 34.50010000000001 }", "File_Name": "AI_0_4m_20160103_915444W341929N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-91.912499536, 34.324999340000005)", "Projection": "EPSG:4326", "Resolution": 0.4, "River Name": "Arkansas River", "Rows": 77975, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "Arkansas,USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_dd0bd19787957e70643bf5b95c157964 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a861ecb01296dda4abf549eeb3535e1e = $(`<div id="html_a861ecb01296dda4abf549eeb3535e1e" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_4m_20160103_915444W341929N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.4</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -92.1751, "ymin": 34.149898680000007, "xmax": -91.649899071999997, "ymax": 34.50010000000001 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>915444W341929N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>77975</td></tr><tr><th style='text-align:left'>Columns</th><td>116940</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas,USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Aerial Imagery with a spatial resolution of 0.4m.</td></tr><tr><th style='text-align:left'>River Name</th><td>Arkansas River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-91.912499536, 34.324999340000005)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20160103</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20160103_915444W341929N/AI_0_4m_20160103_915444W341929N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_dd0bd19787957e70643bf5b95c157964.setContent(html_a861ecb01296dda4abf549eeb3535e1e);
+            
+        
+
+        geo_json_ead09e9c223bd247440ee09d503ef71b.bindPopup(popup_dd0bd19787957e70643bf5b95c157964)
+        ;
+
+        
+    
+    
+            geo_json_ead09e9c223bd247440ee09d503ef71b.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+        function geo_json_ce33eecd8f40309adf542e8791d09c71_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ce33eecd8f40309adf542e8791d09c71_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ce33eecd8f40309adf542e8791d09c71 = L.geoJson(null, {
+                onEachFeature: geo_json_ce33eecd8f40309adf542e8791d09c71_onEachFeature,
+            
+                style: geo_json_ce33eecd8f40309adf542e8791d09c71_styler,
+            ...{
+}
+        });
+
+        function geo_json_ce33eecd8f40309adf542e8791d09c71_add (data) {
+            geo_json_ce33eecd8f40309adf542e8791d09c71
+                .addData(data);
+        }
+            geo_json_ce33eecd8f40309adf542e8791d09c71_add({"features": [{"geometry": {"coordinates": [[[-90.12930281393459, 39.69341738649147], [-90.08794142384487, 40.19704133157932], [-90.67018048969209, 40.22300735847905], [-90.70748632223786, 39.719195842740056], [-90.12930281393459, 39.69341738649147]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 121272, "DMS_Code_centroid": "902358W395729N", "Date of the Flood": "20160104", "Description": "FIM generated from NOAA Emergency Response Imagery of 2016 Midwest Flood with a spatial resolution of 0.4m.", "Extent": "{ \"xmin\": -90.671978616000004, \"ymin\": 39.717691225599999, \"xmax\": -90.127321809600005, \"ymax\": 40.1988828848 }", "File_Name": "AI_0_4m_20160104_902358W395729N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-90.3996502128, 39.9582870552)", "Projection": "EPSG:4326", "Resolution": 0.4, "River Name": "Illinois River", "Rows": 107141, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "Illinois,USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6355f1a2145d1ae2dd52995bd218450a = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ef2b36d0445cf6391efa983d3a90c56d = $(`<div id="html_ef2b36d0445cf6391efa983d3a90c56d" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_4m_20160104_902358W395729N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.4</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -90.671978616000004, "ymin": 39.717691225599999, "xmax": -90.127321809600005, "ymax": 40.1988828848 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>902358W395729N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>107141</td></tr><tr><th style='text-align:left'>Columns</th><td>121272</td></tr><tr><th style='text-align:left'>State</th><td>Illinois,USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Imagery of 2016 Midwest Flood with a spatial resolution of 0.4m.</td></tr><tr><th style='text-align:left'>River Name</th><td>Illinois River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-90.3996502128, 39.9582870552)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20160104</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20160104_902358W395729N/AI_0_4m_20160104_902358W395729N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_6355f1a2145d1ae2dd52995bd218450a.setContent(html_ef2b36d0445cf6391efa983d3a90c56d);
+            
+        
+
+        geo_json_ce33eecd8f40309adf542e8791d09c71.bindPopup(popup_6355f1a2145d1ae2dd52995bd218450a)
+        ;
+
+        
+    
+    
+            geo_json_ce33eecd8f40309adf542e8791d09c71.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+        function geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2 = L.geoJson(null, {
+                onEachFeature: geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2_onEachFeature,
+            
+                style: geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2_styler,
+            ...{
+}
+        });
+
+        function geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2_add (data) {
+            geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2
+                .addData(data);
+        }
+            geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2_add({"features": [{"geometry": {"coordinates": [[[-85.53787658109584, 38.09512664868151], [-85.4976156742336, 38.37633220829108], [-85.90717667963023, 38.410722276375154], [-85.9458915693922, 38.129386064502434], [-85.53787658109584, 38.09512664868151]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 168185, "DMS_Code_centroid": "854320W381510N", "Date of the Flood": "20250412", "Description": "FIM generated from NOAA Emergency Response Imagery of 2025 Hurricane Harvey with a spatial resolution of 0.2m", "Extent": "{ \"xmin\": -85.911502885466447, \"ymin\": 38.126551938396155, \"xmax\": -85.533391803859061, \"ymax\": 38.379391874668073 }", "File_Name": "AI_0_2m_20250412_854320W381510N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-85.72244734466275, 38.25297190653211)", "Projection": "EPSG:4326", "Resolution": 0.2, "River Name": "Ohio River", "Rows": 112464, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "Kentucky, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_54b499afb1da99c42a51eddda9da1b34 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_17669892d998cf1c0e556109308a112b = $(`<div id="html_17669892d998cf1c0e556109308a112b" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_2m_20250412_854320W381510N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.2</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -85.911502885466447, "ymin": 38.126551938396155, "xmax": -85.533391803859061, "ymax": 38.379391874668073 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>854320W381510N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>112464</td></tr><tr><th style='text-align:left'>Columns</th><td>168185</td></tr><tr><th style='text-align:left'>State</th><td>Kentucky, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Imagery of 2025 Hurricane Harvey with a spatial resolution of 0.2m</td></tr><tr><th style='text-align:left'>River Name</th><td>Ohio River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-85.72244734466275, 38.25297190653211)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20250412</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20250412_854320W381510N/AI_0_2m_20250412_854320W381510N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_54b499afb1da99c42a51eddda9da1b34.setContent(html_17669892d998cf1c0e556109308a112b);
+            
+        
+
+        geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2.bindPopup(popup_54b499afb1da99c42a51eddda9da1b34)
+        ;
+
+        
+    
+    
+            geo_json_fe1745e48bbdb6d0aa892a73a3b9afd2.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+        function geo_json_765a18cf1f969fb7c8a240b93dd05413_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_765a18cf1f969fb7c8a240b93dd05413_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_765a18cf1f969fb7c8a240b93dd05413 = L.geoJson(null, {
+                onEachFeature: geo_json_765a18cf1f969fb7c8a240b93dd05413_onEachFeature,
+            
+                style: geo_json_765a18cf1f969fb7c8a240b93dd05413_styler,
+            ...{
+}
+        });
+
+        function geo_json_765a18cf1f969fb7c8a240b93dd05413_add (data) {
+            geo_json_765a18cf1f969fb7c8a240b93dd05413
+                .addData(data);
+        }
+            geo_json_765a18cf1f969fb7c8a240b93dd05413_add({"features": [{"geometry": {"coordinates": [[[-91.26565956647677, 34.62107554756394], [-91.22013972358808, 35.35626462729609], [-91.53841617542042, 35.36873086315402], [-91.58091409017459, 34.633432289425016], [-91.26565956647677, 34.62107554756394]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 61017, "DMS_Code_centroid": "912407W345941N", "Date of the Flood": "20160103", "Description": "FIM generated from NOAA Emergency Response Imagery with a spatial resolution of 0.5m.", "Extent": "{ \"xmin\": -91.539038174400005, \"ymin\": 34.631842329600005, \"xmax\": -91.264998624, \"ymax\": 35.358073860800019 }", "File_Name": "AI_0_5m_20160103_912407W345941N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-91.4020183992, 34.99495809520001)", "Projection": "EPSG:4326", "Resolution": 0.5, "River Name": "White River", "Rows": 161701, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "Arkansas, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_782fb1d75b695653b15aaa599666ae5a = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_d226e0fe11918a208c6830222fce9bc0 = $(`<div id="html_d226e0fe11918a208c6830222fce9bc0" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_5m_20160103_912407W345941N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.5</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -91.539038174400005, "ymin": 34.631842329600005, "xmax": -91.264998624, "ymax": 35.358073860800019 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>912407W345941N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>161701</td></tr><tr><th style='text-align:left'>Columns</th><td>61017</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Imagery with a spatial resolution of 0.5m.</td></tr><tr><th style='text-align:left'>River Name</th><td>White River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-91.4020183992, 34.99495809520001)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20160103</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20160103_912407W345941N/AI_0_5m_20160103_912407W345941N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_782fb1d75b695653b15aaa599666ae5a.setContent(html_d226e0fe11918a208c6830222fce9bc0);
+            
+        
+
+        geo_json_765a18cf1f969fb7c8a240b93dd05413.bindPopup(popup_782fb1d75b695653b15aaa599666ae5a)
+        ;
+
+        
+    
+    
+            geo_json_765a18cf1f969fb7c8a240b93dd05413.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+        function geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9 = L.geoJson(null, {
+                onEachFeature: geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9_onEachFeature,
+            
+                style: geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9_styler,
+            ...{
+}
+        });
+
+        function geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9_add (data) {
+            geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9
+                .addData(data);
+        }
+            geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9_add({"features": [{"geometry": {"coordinates": [[[-92.38632883869816, 34.82632469600625], [-92.36882252427743, 35.19764185023637], [-92.88565519036402, 35.21244498361832], [-92.90067363435521, 34.84106195752976], [-92.38632883869816, 34.82632469600625]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 111458, "DMS_Code_centroid": "923809W350109N", "Date of the Flood": "20160103", "Description": "FIM generated from NOAA Emergency Response Aerial Imagery with a spatial resolution of 0.4m.", "Extent": "{ \"xmin\": -92.886235665599997, \"ymin\": 34.840678246399996, \"xmax\": -92.385655495999998, \"ymax\": 35.198159801599992 }", "File_Name": "AI_0_4m_20160103_923809W350109N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-92.6359455808, 35.019419023999994)", "Projection": "EPSG:4326", "Resolution": 0.4, "River Name": "Arkansas River", "Rows": 79596, "Source": "SDML Lab, University of Alabama", "State": "Arkansas, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_122ffa25ab5c21b097cac721215f604b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_1d95ed10681bff11f99be36fa271e769 = $(`<div id="html_1d95ed10681bff11f99be36fa271e769" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_4m_20160103_923809W350109N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.4</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -92.886235665599997, "ymin": 34.840678246399996, "xmax": -92.385655495999998, "ymax": 35.198159801599992 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>923809W350109N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>79596</td></tr><tr><th style='text-align:left'>Columns</th><td>111458</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Aerial Imagery with a spatial resolution of 0.4m.</td></tr><tr><th style='text-align:left'>River Name</th><td>Arkansas River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, University of Alabama</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-92.6359455808, 35.019419023999994)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20160103</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20160103_923809W350109N/AI_0_4m_20160103_923809W350109N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_122ffa25ab5c21b097cac721215f604b.setContent(html_1d95ed10681bff11f99be36fa271e769);
+            
+        
+
+        geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9.bindPopup(popup_122ffa25ab5c21b097cac721215f604b)
+        ;
+
+        
+    
+    
+            geo_json_bdd71ab59cd40ef52f9ab1f3e6be0bb9.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+        function geo_json_38c2daf184029540d5e7ad4f0b4c9ddc_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_38c2daf184029540d5e7ad4f0b4c9ddc_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_38c2daf184029540d5e7ad4f0b4c9ddc = L.geoJson(null, {
+                onEachFeature: geo_json_38c2daf184029540d5e7ad4f0b4c9ddc_onEachFeature,
+            
+                style: geo_json_38c2daf184029540d5e7ad4f0b4c9ddc_styler,
+            ...{
+}
+        });
+
+        function geo_json_38c2daf184029540d5e7ad4f0b4c9ddc_add (data) {
+            geo_json_38c2daf184029540d5e7ad4f0b4c9ddc
+                .addData(data);
+        }
+            geo_json_38c2daf184029540d5e7ad4f0b4c9ddc_add({"features": [{"geometry": {"coordinates": [[[-91.54409884317218, 34.06442271201578], [-91.53974417141161, 34.14042004954773], [-91.59560938916574, 34.14255509775456], [-91.5999096752215, 34.066555878692725], [-91.54409884317218, 34.06442271201578]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 11519, "DMS_Code_centroid": "913411W340612N", "Date of the Flood": "20160103", "Description": "FIM generated from NOAA Emergency Response Imagery with a spatial resolution of 0.5m.", "Extent": "{ \"xmin\": -91.595721080000004, \"ymin\": 34.066397505600008, \"xmax\": -91.543986947199997, \"ymax\": 34.140583147200019 }", "File_Name": "AI_0_5m_20160103_913411W340612N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-91.56985401360001, 34.10349032640001)", "Projection": "EPSG:4326", "Resolution": 0.5, "River Name": "Arkansas River", "Rows": 16518, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "Arkansas, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e7c66cc66e7358be63b58d0eea801f95 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_3014c6e39fec73f82b9def41a84f9519 = $(`<div id="html_3014c6e39fec73f82b9def41a84f9519" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_5m_20160103_913411W340612N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.5</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -91.595721080000004, "ymin": 34.066397505600008, "xmax": -91.543986947199997, "ymax": 34.140583147200019 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>913411W340612N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>16518</td></tr><tr><th style='text-align:left'>Columns</th><td>11519</td></tr><tr><th style='text-align:left'>State</th><td>Arkansas, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Imagery with a spatial resolution of 0.5m.</td></tr><tr><th style='text-align:left'>River Name</th><td>Arkansas River</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-91.56985401360001, 34.10349032640001)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20160103</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20160103_913411W340612N/AI_0_5m_20160103_913411W340612N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_e7c66cc66e7358be63b58d0eea801f95.setContent(html_3014c6e39fec73f82b9def41a84f9519);
+            
+        
+
+        geo_json_38c2daf184029540d5e7ad4f0b4c9ddc.bindPopup(popup_e7c66cc66e7358be63b58d0eea801f95)
+        ;
+
+        
+    
+    
+            geo_json_38c2daf184029540d5e7ad4f0b4c9ddc.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+        function geo_json_85eb37176dd2d5d2f55f115da127d24a_styler(feature) {
+            switch(feature.properties.File_Name) {
+                default:
+                    return {"color": "#08306b", "fillOpacity": 0.5, "weight": 1.5};
+            }
+        }
+
+        function geo_json_85eb37176dd2d5d2f55f115da127d24a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_85eb37176dd2d5d2f55f115da127d24a = L.geoJson(null, {
+                onEachFeature: geo_json_85eb37176dd2d5d2f55f115da127d24a_onEachFeature,
+            
+                style: geo_json_85eb37176dd2d5d2f55f115da127d24a_styler,
+            ...{
+}
+        });
+
+        function geo_json_85eb37176dd2d5d2f55f115da127d24a_add (data) {
+            geo_json_85eb37176dd2d5d2f55f115da127d24a
+                .addData(data);
+        }
+            geo_json_85eb37176dd2d5d2f55f115da127d24a_add({"features": [{"geometry": {"coordinates": [[[-95.52490024343568, 29.724693235765756], [-95.52461105883307, 29.775098743458155], [-95.57509893719023, 29.775307124198335], [-95.57535741029776, 29.724901513872652], [-95.52490024343568, 29.724693235765756]]], "type": "Polygon"}, "properties": {"Access_Rights": "Public", "Bands": 1, "Columns": 18628, "DMS_Code_centroid": "953259W294459N", "Date of the Flood": "20170831", "Description": "FIM generated from NOAA Emergency Response Imagery of 2017 Hurricane Harvey with a spatial resolution of 0.3m.", "Extent": "{ \"xmin\": -95.575100000000006, \"ymin\": 29.724899422521663, \"xmax\": -95.524899422521671, \"ymax\": 29.775099999999998 }", "File_Name": "AI_0_3m_2017083_953259W294459N_BM.tif", "Format": "GTiff", "Level": "Level_1", "Location of the centroid of the flood map": "(-95.54999971126084, 29.74999971126083)", "Projection": "EPSG:4326", "Resolution": 0.3, "River Name": "Buffalo Bayou", "Rows": 18628, "Source": "SDML Lab, The University of Alabama, Tuscaloosa, USA", "State": "Texas, USA"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7dc1f5605d15c717edcf4f04b7c33ece = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7077ddbc13236912a95be1b48bd9cc39 = $(`<div id="html_7077ddbc13236912a95be1b48bd9cc39" style="width: 100.0%; height: 100.0%;"><table style='width:100%; font-size:12px;'><tr><th style='text-align:left'>File_Name</th><td>AI_0_3m_2017083_953259W294459N_BM.tif</td></tr><tr><th style='text-align:left'>Format</th><td>GTiff</td></tr><tr><th style='text-align:left'>Resolution</th><td>0.3</td></tr><tr><th style='text-align:left'>Extent</th><td>{ "xmin": -95.575100000000006, "ymin": 29.724899422521663, "xmax": -95.524899422521671, "ymax": 29.775099999999998 }</td></tr><tr><th style='text-align:left'>DMS_Code_centroid</th><td>953259W294459N</td></tr><tr><th style='text-align:left'>Projection</th><td>EPSG:4326</td></tr><tr><th style='text-align:left'>Bands</th><td>1</td></tr><tr><th style='text-align:left'>Rows</th><td>18628</td></tr><tr><th style='text-align:left'>Columns</th><td>18628</td></tr><tr><th style='text-align:left'>State</th><td>Texas, USA</td></tr><tr><th style='text-align:left'>Description</th><td>FIM generated from NOAA Emergency Response Imagery of 2017 Hurricane Harvey with a spatial resolution of 0.3m.</td></tr><tr><th style='text-align:left'>River Name</th><td>Buffalo Bayou</td></tr><tr><th style='text-align:left'>Source</th><td>SDML Lab, The University of Alabama, Tuscaloosa, USA</td></tr><tr><th style='text-align:left'>Location of the centroid of the flood map</th><td>(-95.54999971126084, 29.74999971126083)</td></tr><tr><th style='text-align:left'>Date of the Flood</th><td>20170831</td></tr><tr><th style='text-align:left'>Access_Rights</th><td>Public</td></tr><tr><th style='text-align:left'>Level</th><td>Level_1</td></tr><tr><td colspan='2'><a href='https://sdmlab.s3.amazonaws.com/FIM_Database/Level_1/20170831_953259W294459N/AI_0_3m_2017083_953259W294459N_BM.tif' target='_blank' download>⬇ Download TIFF</a></td></tr></table></div>`)[0];
+                popup_7dc1f5605d15c717edcf4f04b7c33ece.setContent(html_7077ddbc13236912a95be1b48bd9cc39);
+            
+        
+
+        geo_json_85eb37176dd2d5d2f55f115da127d24a.bindPopup(popup_7dc1f5605d15c717edcf4f04b7c33ece)
+        ;
+
+        
+    
+    
+            geo_json_85eb37176dd2d5d2f55f115da127d24a.addTo(feature_group_d75611b8d906de17fdb6312d3ccb4a50);
+        
+    
+            feature_group_d75611b8d906de17fdb6312d3ccb4a50.addTo(map_c69521d648f68f400364bbd167bdbfd6);
+        
+    
+            var layer_control_18f219c1b5799d693877f9ef77f8f2e0_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_5f97029301baaf7763929c47c1c8f0bb,
+                    "cartodbpositron" : tile_layer_a6b6441bbb7d1036b7babc38f2ebae2c,
+                    "Satellite Imagery" : tile_layer_14292d3878ab3ccdd53be7196a35ba18,
+                },
+                overlays :  {
+                    "Level_4" : feature_group_5389b0342c24bedc1a003d6402a01794,
+                    "Level_2" : feature_group_806eb0b86a279319ecff59d01926d812,
+                    "Level_3" : feature_group_a1a0174e1a387d48095e8856e711de3c,
+                    "Level_1" : feature_group_d75611b8d906de17fdb6312d3ccb4a50,
+                },
+            };
+            let layer_control_18f219c1b5799d693877f9ef77f8f2e0 = L.control.layers(
+                layer_control_18f219c1b5799d693877f9ef77f8f2e0_layers.base_layers,
+                layer_control_18f219c1b5799d693877f9ef77f8f2e0_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_c69521d648f68f400364bbd167bdbfd6);
+
+        
+</script>
+</html>
