@@ -18,8 +18,8 @@ Visualization and downloading from the S3 Bucket is enabled through a Jupyter No
 
 The architecture of the ```fimpef``` integrates different modules to which helps the automation of flood evaluation. All those modules codes are in source (```src``` ) folder.
 ```bash
-fimpef/     
-├── docs/                       # Documentation (contains 'FIMserv' Tool usage sample codes)
+Benchmark_FIM_Database/     
+├── FIM/                       # Documentation (contains 'FIMserv' Tool usage sample codes)
 │   └── sampledata/              # Contains the sample data to demonstrate how this frameworks works    
 │   └── fimpef_usage.ipynb            #Sample code usage of the Evaluation framework
 ├── Images/                       # have sample images for documentation       
