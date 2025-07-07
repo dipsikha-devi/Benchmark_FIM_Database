@@ -1,3 +1,8 @@
+
+| | |
+| --- | --- |
+| <a href="https://sdml.ua.edu"><img src="https://sdml.ua.edu/wp-content/uploads/2023/01/SDML_logo_Sq_grey.png" alt="SDML Logo" width="300"></a> | This repository provides user-friendly source code for visualizing and downloading the Benchmark FIM Database. It is developed under Surface Dynamics Modeling Lab (SDML), Department of Geography and the Environment at The University of Alabama, United States.
+ 
 # Benchmark FIM Database
 The Benchmark Flood Inundation Mapping (FIM) Database comprises of remote sensing-derived and high-fidelity model-predicted FIMs. The FIM inventory is classified into four quality-based levels (Figure 1). The database is stored in an AWS S3 bucket with an open API. Each folder in the S3 Bucket includes:<br>
 (a) A flood inundation raster (GeoTIFF; <code>.tiff</code>)<br>
@@ -83,6 +88,7 @@ Where:
   
 #### Example:
 S1A_10m_20190527T00265_ 953144W310436N_BM.tif
+The detail information is available in the Guidelines file showing the detail metadata, naming convention and folder structure.
 
 ### **Vizualization and Download**
 <p align="center">
@@ -105,6 +111,7 @@ Benchmark_FIM_Database/
 ```
 ### **Source** 
 The database is available in https://sdmlab.ciroh.org/#FIM_Database/
+
 
 ### **Acknowledgements**
 | | |
