@@ -105,3 +105,14 @@ Benchmark_FIM_Database/
 ```
 ### **Source** 
 The database is available in https://sdmlab.ciroh.org/#FIM_Database/
+
+### **Acknowledgements**
+| | |
+| --- | --- |
+| ![alt text](https://ciroh.ua.edu/wp-content/uploads/2022/08/CIROHLogo_200x200.png) | Funding for this project was provided by the National Oceanic & Atmospheric Administration (NOAA), awarded to the Cooperative Institute for Research to Operations in Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama.
+
+### **For More Information**
+Contact <a href="https://geography.ua.edu/people/sagy-cohen/" target="_blank">Sagy Cohen</a>
+ (sagy.cohen@ua.edu)
+ Dipsikha Devi, (ddevi@ua.edu)
+Supath Dhital, (sdhital@crimson.ua.edu)
